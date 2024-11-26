@@ -36,7 +36,7 @@ export const getS3Credentials = (destination: Destination) => {
 		`--s3-region=${region}`,
 		`--s3-endpoint=${endpoint}`,
 		"--s3-no-check-bucket",
-		"--s3-force-path-style",
+		// "--s3-force-path-style",
 	];
 
 	return rcloneFlags;

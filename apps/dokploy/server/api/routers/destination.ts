@@ -50,7 +50,7 @@ export const destinationRouter = createTRPCRouter({
 					`--s3-region=${region}`,
 					`--s3-endpoint=${endpoint}`,
 					"--s3-no-check-bucket",
-					"--s3-force-path-style",
+					// "--s3-force-path-style",
 				];
 				const rcloneDestination = `:s3:${bucket}`;
 				const rcloneCommand = `rclone ls ${rcloneFlags.join(" ")} "${rcloneDestination}"`;
