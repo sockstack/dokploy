@@ -30,13 +30,11 @@ export const removeScheduleBackup = (backupId: string) => {
 export const getS3Credentials = (destination: Destination) => {
 	const { accessKey, secretAccessKey, bucket, region, endpoint } = destination;
 	const rcloneFlags = [
-		// `--s3-provider=Cloudflare`,
 		`--s3-access-key-id=${accessKey}`,
 		`--s3-secret-access-key=${secretAccessKey}`,
 		`--s3-region=${region}`,
 		`--s3-endpoint=${endpoint}`,
-		"--s3-no-check-bucket",
-		// "--s3-force-path-style",
+		"--s3-no-check-bucket"
 	];
 
 	return rcloneFlags;
